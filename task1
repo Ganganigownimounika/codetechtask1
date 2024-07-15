@@ -1,0 +1,39 @@
+//Verilog HDL Program for logic gates: 
+module basic1(a,b,YAND,YOR,YNOT,YXOR);
+ input a,b; 
+output YAND,YOR,YNOT,YXOR; 
+assign YAND = a & b; 
+assign YOR = a | b; 
+assign YNOT =~ a ;
+assign YXOR = a ^ b;
+endmodule
+
+//VHDL Program for Half Adders
+// Gate Level Modeling
+Library ieee;
+use ieee.std_logic_1164.all;
+entity half adder is
+port (A, B: in STD_LOGIC;
+S, C: out STD_LOGIC);
+end half adder;
+
+//MULTIPLEXERS USING VERILOG
+//VHDL Program – 8x1 Multiplexer using structural modeling
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+entity mux_8x1_str_program is
+Port ( I : in  STD_LOGIC_VECTOR (7 downto 0);
+           sel : in  STD_LOGIC_VECTOR (2 downto 0);
+           Y : out  STD_LOGIC);
+end mux_8x1_str_program;
+architecture structure of mux_8X1_str_program is
+component and_4_program
+	Port ( A : in STD_LOGIC;
+			 B : in STD_LOGIC;
+			 C : in STD_LOGIC;
+			 D : in STD_LOGIC;
+       Y : out STD_LOGIC);
+end component;
